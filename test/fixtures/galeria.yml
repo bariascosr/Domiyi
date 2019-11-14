@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ruta: MyString
+  id_establecimiento: 1
+
+two:
+  ruta: MyString
+  id_establecimiento: 1

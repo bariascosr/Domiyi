@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
+
+<h1>
+<%=@producto.nombre%>
+</h1>
+<%@x = @producto.nombre.mb_chars.decompose.scan(/[a-zA-Z0-9_ ]/).join%>
+<img src= "<%=@producto.icon_plato%>" width="200" height="200">
+<p><%=@producto.detalle%></p>
+<h3>
+Precio
+</h3>
+<p><%=@producto.precio%>
+<%= button_to 'Ordenar ahora', "https://api.whatsapp.com/send?phone=573209908470&text=Hola, me gustaria pedir el producto: "+ @x %>
+</body>
+
+</html>

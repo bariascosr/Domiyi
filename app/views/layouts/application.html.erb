@@ -2,14 +2,60 @@
 <html>
   <head>
     <title>Domiyi</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  
+    <meta charset="utf-8">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+    <ul class="topnav">
+      <div class="logo">
+      <%= link_to image_tag("LogoMain.jpg", width:'50', height:'50'), root_path %>
+      </div>
+      <li class = "col-md"><%= link_to 'Domiyi', root_path %></li>
+      <li class = "col-md"><%= link_to 'Destacados', pages_Destacados_path %></li>
+      <li class = "col-md"><%= link_to 'Comida', pages_Comida_path %></li>
+      <li class = "col-md"><%= link_to 'Alojamiento', pages_Alojamiento_path %></li>
+      <li class = "col-md"><%= link_to 'Bares Y Licores', pages_BaresYLicores_path %></li>
+      <li class = "col-md"><%= link_to 'DeporteYEntretenimiento', pages_DeporteYEntretenimiento_path %></li>
+      <li class = "col-md"><%= link_to 'Productos', pages_Productos_path %></li>
+      <li class = "col-md"><%= link_to 'Servicios', pages_Servicios_path %></li>
+      <li class = "col-md"><%= link_to 'Salud', pages_Salud_path %></li>
+      <li class = "col-md"><%= link_to 'Educación', pages_Educacion_path %></li>
+      <li class = "col-md"><%= link_to 'Otros', pages_Otros_path %></li>
+    </ul>
+
+    </header>
+      <div class="transbox">
+      <%= yield%>
+      </div>
+    <footer>
+
+      <ul class="footer-bs">
+        <div class="container">
+          <div class="row">
+        <div>
+        <ul class="social-network social-circle">
+          <li><a href="https://www.facebook.com/DomiYi/" class="icoFacebook" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://www.instagram.com/domiyi_acacias/" class="icoInstagram" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+      </div>
+    </div>
+  </div>
+        <li><%= link_to 'Contáctanos', pages_Contactanos_path %></li>          
+        <li><%= link_to '¿Quiénes Somos?', pages_QuienesSomos_path %> </li>       
+        <li><%= link_to 'Recordatorio', pages_Recordatorio_path %></li>
+      </ul>
+    </footer>
+    
+
   </body>
 </html>

@@ -3,27 +3,9 @@ Rails.application.routes.draw do
   
   #get 'controlador/accion', to: "controlador#accion"
   
-  #get 'pages/welcome', to: "pages#welcome"
+
 
   root 'pages#Welcome'
-
-  #Destacados
-  #Comida
-  #Alojamiento
-  #Bares y licores
-  #Deporte y entretenimiento
-  #Productos
-  #Servicios
-  #Salud
-  #Educación
-  #Otros
-
-
-
-  #Guía
-  #Contáctanos
-  #¿Quiénes Somos?
-  #Recordatorio
   
   get 'pages/Destacados', to: "pages#Destacados"
 
@@ -52,6 +34,14 @@ Rails.application.routes.draw do
   get 'pages/QuienesSomos', to: "pages#QuienesSomos"
 
   get 'pages/Recordatorio', to: "pages#Recordatorio"
+
+  get 'pages/Establecimiento', to: "pages#Establecimiento"
+
+  get 'pages/Producto', to: "pages#Producto"
+
+  get "pages/:id" => "pages#Establecimiento" #borrar
+
+
 
 
 end

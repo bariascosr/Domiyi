@@ -1,0 +1,35 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  categoria: MyString
+  nombre: MyText
+  img_coorporativa: MyText
+  clasificacion: MyText
+  telefono: MyText
+  direccion: MyText
+  horario: MyText
+  precio_domicilio: MyText
+  ciudad: MyString
+  ubicacion: MyText
+  descripcion: MyText
+  plan: MyString
+  tipo_domicilio: MyString
+  horariologico: MyText
+  tipo_info: MyString
+
+two:
+  categoria: MyString
+  nombre: MyText
+  img_coorporativa: MyText
+  clasificacion: MyText
+  telefono: MyText
+  direccion: MyText
+  horario: MyText
+  precio_domicilio: MyText
+  ciudad: MyString
+  ubicacion: MyText
+  descripcion: MyText
+  plan: MyString
+  tipo_domicilio: MyString
+  horariologico: MyText
+  tipo_info: MyString

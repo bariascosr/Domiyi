@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<img src= "<%=@establecimiento.img_coorporativa%>">
+<h1>
+<%=@establecimiento.nombre%>
+</h1>
+
+<p><%=@establecimiento.clasificacion%></p>
+<h1>
+Galería
+</h1>
+
+<div class = "row">
+  <% @galeria.each do |g| %>
+      <img src= "<%=g.ruta%>" width="300" height="300">
+  <% end %>
+</div>
+
+<h3>
+
+Teléfono
+</h3>
+
+<p><%=@establecimiento.telefono%></p>
+
+<h3>
+Dirección
+</h3>
+
+<p><%=@establecimiento.direccion%></p>
+
+
+<h3>
+
+Horario de atención:
+
+</h3>
+
+<p><%=@establecimiento.horario%></p>
+
+<h3> 
+
+Precio del domicilio
+
+</h3>
+
+<p><%=@establecimiento.precio_domicilio%></p>
+
+<h3> 
+
+Ubicación
+
+</h3>
+
+<p>En proceso!<p>
+
+<h3> 
+
+Ubicación del establecimiento
+
+</h3>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497.52079569452644!2d-73.76568021818252!3d3.9861744419490828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3e3eb4ab74ca69%3A0x58a3efa5595b976d!2sCl.+13+%2322-12%2C+Acac%C3%ADas%2C+Meta!5e0!3m2!1ses!2sco!4v1565568587823!5m2!1ses!2sco" width="300" height="200" frameborder="10" style="border:1" allowfullscreen></iframe>
+
+
+<h1> 
+
+Menú
+
+</h1>
+
+<% @productos.each do |p| %>
+  <h3><%=link_to p.nombre, :controller => "pages", :action => "Producto", :id => p.id%></h3>
+  <p><%=p.detalle%></p>
+  <p><%=p.precio%></p>
+<% end %>
+</body>
+
+</html>

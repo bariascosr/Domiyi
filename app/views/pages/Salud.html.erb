@@ -2,15 +2,20 @@
 <HTML>   
     
     <head>
+        <link rel="stylesheet" href="/assets/stylesheets/metro-bootstrap.css">
     </head>
 
     <body>
-        <h1> 
-        Esta es la página de Salud
-        </h1>
-        <%= link_to 'Welcome', root_path %>
-       
-
+        <div class = "row">
+            <% @establecimientos.each do |e| %>
+                <div class = "col-md-4">
+                    <h3><%=link_to e.nombre, :controller => "pages", :action => "Establecimiento", :id => e.id%></h3>
+                    <%= link_to :controller => "pages", :action => "Establecimiento", :id => e.id do %>
+                        <img src= "<%=e.img_coorporativa%>" width="300" height="300">
+                    <% end %>
+                    <h4><%= e.clasificacion%></h4>
+                </div>
+            <% end %>
+        </div>
     </body>
-
-<HTML>
+</HTML>

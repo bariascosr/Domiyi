@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_plato: 1
+  nombre: MyString
+  precio: MyString
+  icon_plato: MyString
+  detalle: MyString
+  id: 1
+  destacado: MyString
+
+two:
+  id_plato: 1
+  nombre: MyString
+  precio: MyString
+  icon_plato: MyString
+  detalle: MyString
+  id: 1
+  destacado: MyString
